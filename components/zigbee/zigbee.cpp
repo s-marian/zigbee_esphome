@@ -387,7 +387,7 @@ esp_err_t ZigBeeComponent::create_endpoint(uint8_t endpoint_id, esp_zb_ha_standa
 
 static void esp_zb_task_(void *pvParameters) {
 
-  esp_zb_set_tx_power(IEEE802154_TXPOWER_VALUE_MAX);
+  esp_zb_set_tx_powers(IEEE802154_TXPOWER_VALUE_MAX);
   
   if (esp_zb_start(false) != ESP_OK) {
     ESP_LOGE(TAG, "Could not setup Zigbee");
